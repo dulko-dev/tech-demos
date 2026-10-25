@@ -33,5 +33,5 @@ This is a tech-demos monorepo: one small demo app per pick, never a new repo.
 
 ## Pull requests
 
-- Every PR MUST include **at least one screenshot AND at least one video** (screen recording) of the running app, demonstrating the demo actually works.
+- Every PR MUST include **at least one screenshot** of the running app and a **clear description** demonstrating the demo actually works. Video is NOT required.
 - Include run instructions in the app's own `README.md`.
