@@ -154,6 +154,12 @@ export function TrianglePanel({ lib, polys, stripMode, hover, onHover }: Props) 
           onPointerLeave={() => onHover(null)}
         />
         <p className="mt-1 h-4 text-xs text-muted-foreground">{hoverInfo ?? '\u00A0'}</p>
+        {lib === 'earstrip' && !stripMode && rendered.triangles === 0 && polys.length > 0 && (
+          <p className="mt-1 text-xs text-amber-600">
+            0 triangles: the drop-in list mode only uses input vertices, and this self-intersecting ring needs points added at the
+            crossings. Turn on "Color earstrip's triangle strips" to see the constrained result.
+          </p>
+        )}
       </CardContent>
     </Card>
   )

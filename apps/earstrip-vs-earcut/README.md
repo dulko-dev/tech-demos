@@ -16,7 +16,7 @@ Then open the printed URL (default http://localhost:5173).
 ## What you can do
 
 - **Draw** a polygon on the left canvas: click to add points, "Close ring" to finish the outline, then draw more rings inside it as holes.
-- **Presets**: square with hole, star, self-intersecting ring (where earcut and earstrip genuinely differ — earstrip falls back to a constrained Delaunay triangulation), and a 1000-hole stress polygon.
+- **Presets**: square with hole, star, self-intersecting ring, and a 1000-hole stress polygon. The self-intersecting ring is where the libraries genuinely differ: earcut paints a (wrong) area, earstrip's drop-in list mode reports `approximate` and can return 0 triangles (it may not add vertices), and its `strips()` mode adds points at the crossings and returns a correct constrained triangulation.
 - **Compare** the two side-by-side panels: colored triangle fills + wireframe from each library, with per-panel triangle counts and timing. Hovering a panel highlights the triangle under the cursor in both panels.
 - **Benchmark**: run each triangulator N× (20/100/500) on the current scene; a table shows median/total ms, triangle count, index count, and speedup vs earcut. Three rows: earcut, earstrip's drop-in triangle list, and earstrip's native `strips()` output.
 - **Real data**: a small static GeoJSON of OSM building footprints (central Berlin, ODbL) is committed in `src/data/buildings.json` — no network, no API key. Load it to triangulate all footprints with both libraries and see totals/timing.
