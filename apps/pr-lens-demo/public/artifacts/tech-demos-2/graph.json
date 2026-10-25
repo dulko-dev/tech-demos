@@ -1,0 +1,297 @@
+{
+  "schemaVersion": "0.2.0",
+  "kind": "graph",
+  "title": "Impeccable before/after detector showcase",
+  "summary": "Adds a self-contained demo that asks whether Impeccable improves AI-default UI. BEFORE is a typical generated landing (63 detector findings). AFTER is the same SyncFlow page after the Impeccable command chain (0 findings). A Vite shell toggles live iframes and shows the raw CLI counts.",
+  "lenses": ["architecture", "data-flow"],
+  "provenance": {
+    "repo": { "owner": "dulko-dev", "name": "tech-demos", "host": "github.com" },
+    "base": { "sha": "ad89c27e37f98ac5af06dada1445f8b61f31b804", "ref": "main" },
+    "head": { "sha": "561af389b9ef5f0654c82f70a618e3765189280a", "ref": "cursor/impeccable-before-after-81e8" },
+    "pullRequest": {
+      "number": 2,
+      "title": "Impeccable before/after: does the detector + skill improve AI-default UI?",
+      "url": "https://github.com/dulko-dev/tech-demos/pull/2"
+    },
+    "generator": { "name": "pr-lens-skill", "version": "0.2.0" }
+  },
+  "stats": {
+    "filesChanged": 26,
+    "additions": 3106,
+    "deletions": 0,
+    "chips": [
+      { "label": "BEFORE", "value": "63 findings", "tone": "removed" },
+      { "label": "AFTER", "value": "0 findings", "tone": "added" }
+    ]
+  },
+  "lanes": [
+    { "id": "showcase", "label": "Showcase", "subtitle": "Vite vanilla-ts", "order": 0, "delta": "added" },
+    { "id": "pages", "label": "Landing pages", "subtitle": "static HTML", "order": 1, "delta": "added" },
+    { "id": "cli", "label": "Impeccable", "subtitle": "CLI 4.7.0", "order": 2 }
+  ],
+  "nodes": [
+    {
+      "id": "showcase-shell",
+      "label": "Showcase shell",
+      "kind": "ui",
+      "delta": "added",
+      "lane": "showcase",
+      "summary": "Toggles BEFORE / AFTER / split iframes and prints detector totals.",
+      "files": [{ "path": "apps/impeccable-before-after/src/main.ts", "startLine": 1, "endLine": 132 }]
+    },
+    {
+      "id": "findings-data",
+      "label": "findings-data.json",
+      "kind": "datastore",
+      "delta": "added",
+      "lane": "showcase",
+      "summary": "Committed per-rule counts from impeccable detect --json.",
+      "files": [{ "path": "apps/impeccable-before-after/src/findings-data.json" }]
+    },
+    {
+      "id": "commands-log",
+      "label": "commands.json",
+      "kind": "config",
+      "delta": "added",
+      "lane": "showcase",
+      "summary": "The Impeccable commands that were actually run, for the log panel.",
+      "files": [{ "path": "apps/impeccable-before-after/src/commands.json" }]
+    },
+    {
+      "id": "before-page",
+      "label": "BEFORE landing",
+      "kind": "ui",
+      "delta": "added",
+      "lane": "pages",
+      "subtitle": "AI-default SyncFlow",
+      "summary": "Deliberate AI-default page. Detector reported 63 findings.",
+      "files": [
+        { "path": "apps/impeccable-before-after/pages/before/index.html" },
+        { "path": "apps/impeccable-before-after/pages/before/style.css" }
+      ],
+      "badges": ["63 findings"]
+    },
+    {
+      "id": "after-page",
+      "label": "AFTER landing",
+      "kind": "ui",
+      "delta": "added",
+      "lane": "pages",
+      "subtitle": "Impeccable-rewritten",
+      "summary": "Same product, rewritten through the Impeccable command chain. Detector reported 0.",
+      "files": [
+        { "path": "apps/impeccable-before-after/pages/after/index.html" },
+        { "path": "apps/impeccable-before-after/pages/after/style.css" }
+      ],
+      "badges": ["0 findings"]
+    },
+    {
+      "id": "product-md",
+      "label": "PRODUCT.md",
+      "kind": "config",
+      "delta": "added",
+      "lane": "cli",
+      "summary": "Product brief from impeccable init. Fields were inferred, not interviewed.",
+      "files": [{ "path": "apps/impeccable-before-after/PRODUCT.md" }]
+    },
+    {
+      "id": "detector",
+      "label": "impeccable detect",
+      "kind": "external",
+      "delta": "unchanged",
+      "lane": "cli",
+      "subtitle": "static HTML engine",
+      "summary": "Existing CLI. Run twice; raw JSON/txt committed under detector-output/."
+    },
+    {
+      "id": "command-chain",
+      "label": "Impeccable commands",
+      "kind": "external",
+      "delta": "unchanged",
+      "lane": "cli",
+      "subtitle": "init → polish",
+      "summary": "Existing skill/CLI: critique, audit, concept-seed, typeset, layout, colorize, animate, clarify, adapt, harden, polish."
+    }
+  ],
+  "edges": [
+    {
+      "id": "shell-to-before",
+      "from": "showcase-shell",
+      "to": "before-page",
+      "kind": "render",
+      "delta": "added",
+      "label": "iframe"
+    },
+    {
+      "id": "shell-to-after",
+      "from": "showcase-shell",
+      "to": "after-page",
+      "kind": "render",
+      "delta": "added",
+      "label": "iframe"
+    },
+    {
+      "id": "findings-to-shell",
+      "from": "findings-data",
+      "to": "showcase-shell",
+      "kind": "data",
+      "delta": "added",
+      "label": "counts"
+    },
+    {
+      "id": "log-to-shell",
+      "from": "commands-log",
+      "to": "showcase-shell",
+      "kind": "data",
+      "delta": "added",
+      "label": "command list"
+    },
+    {
+      "id": "detector-to-before",
+      "from": "detector",
+      "to": "before-page",
+      "kind": "other",
+      "delta": "added",
+      "label": "63 findings"
+    },
+    {
+      "id": "detector-to-after",
+      "from": "detector",
+      "to": "after-page",
+      "kind": "other",
+      "delta": "added",
+      "label": "0 findings"
+    },
+    {
+      "id": "chain-to-after",
+      "from": "command-chain",
+      "to": "after-page",
+      "kind": "other",
+      "delta": "added",
+      "label": "rewrite",
+      "emphasis": "hero",
+      "animated": true
+    },
+    {
+      "id": "product-to-chain",
+      "from": "product-md",
+      "to": "command-chain",
+      "kind": "data",
+      "delta": "added",
+      "label": "brief"
+    }
+  ],
+  "flows": [
+    {
+      "id": "polish-pipeline",
+      "title": "Detect, rewrite, detect again",
+      "delta": "added",
+      "participants": [
+        { "node": "before-page" },
+        { "node": "detector" },
+        { "node": "command-chain" },
+        { "node": "after-page" },
+        { "node": "showcase-shell" }
+      ],
+      "messages": [
+        {
+          "id": "scan-before",
+          "from": "before-page",
+          "to": "detector",
+          "label": "detect --json",
+          "kind": "sync",
+          "delta": "added"
+        },
+        {
+          "id": "before-counts",
+          "from": "detector",
+          "to": "showcase-shell",
+          "label": "63 findings",
+          "kind": "return",
+          "delta": "added"
+        },
+        {
+          "id": "rewrite",
+          "from": "command-chain",
+          "to": "after-page",
+          "label": "init … polish",
+          "kind": "sync",
+          "delta": "added"
+        },
+        {
+          "id": "scan-after",
+          "from": "after-page",
+          "to": "detector",
+          "label": "detect --json",
+          "kind": "sync",
+          "delta": "added"
+        },
+        {
+          "id": "after-counts",
+          "from": "detector",
+          "to": "showcase-shell",
+          "label": "0 findings",
+          "kind": "return",
+          "delta": "added"
+        }
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "overview",
+      "title": "What this PR adds",
+      "lens": "architecture",
+      "defaultOpen": true,
+      "scope": { "kind": "all" },
+      "children": [
+        {
+          "id": "pages-pair",
+          "title": "The two landings",
+          "lens": "architecture",
+          "scope": {
+            "kind": "selection",
+            "nodes": ["before-page", "after-page", "detector", "command-chain", "showcase-shell"],
+            "edges": ["detector-to-before", "chain-to-after", "detector-to-after", "shell-to-before", "shell-to-after"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "polish-flow",
+      "title": "Detect then rewrite",
+      "lens": "data-flow",
+      "scope": { "kind": "selection", "flows": ["polish-pipeline"] }
+    }
+  ],
+  "walkthrough": {
+    "steps": [
+      {
+        "id": "headline",
+        "heading": "AFTER now has 0 detector findings",
+        "body": "BEFORE is 63. AFTER is the same SyncFlow page after the Impeccable command chain.",
+        "stage": { "kind": "view", "view": "overview" }
+      },
+      {
+        "id": "rewrite",
+        "heading": "Commands now rewrite the landing",
+        "body": "init through polish produce AFTER. The detector is unchanged; only the page changes.",
+        "stage": { "kind": "view", "view": "pages-pair" },
+        "focus": { "kind": "selection", "nodes": ["command-chain", "after-page"], "edges": ["chain-to-after"] }
+      },
+      {
+        "id": "flow",
+        "heading": "Scan, rewrite, scan again",
+        "body": "Raw detect output is committed. The shell only displays those counts next to live iframes.",
+        "stage": { "kind": "flow", "flow": "polish-pipeline" }
+      },
+      {
+        "id": "honest",
+        "heading": "A clean scan is not a beauty proof",
+        "body": "No human interview, no URL-engine scan. Zero findings is a floor, not proof the page is beautiful.",
+        "stage": { "kind": "view", "view": "overview" },
+        "focus": { "kind": "selection", "nodes": ["showcase-shell", "findings-data"] }
+      }
+    ]
+  }
+}

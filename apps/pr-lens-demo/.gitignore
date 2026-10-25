@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# PR Lens CLI scratch (write tokens live here — never commit)
+.pr-lens/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

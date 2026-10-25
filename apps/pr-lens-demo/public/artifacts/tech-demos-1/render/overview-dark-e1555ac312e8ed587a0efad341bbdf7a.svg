@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1284 626" width="1284" height="626" role="img" aria-label="What this PR adds" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif">
+<title>What this PR adds</title>
+<desc>Monorepo rules plus the comparison app and the two existing libraries it times.</desc>
+<defs><pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="rgba(110,118,129,.22)"/></pattern><marker id="mk-added" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3fb950"/></marker><marker id="mko-added" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M2,1 L10,5 L2,9" fill="none" stroke="#3fb950" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="mk-modified" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d29922"/></marker><marker id="mko-modified" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M2,1 L10,5 L2,9" fill="none" stroke="#d29922" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="mk-removed" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#f85149"/></marker><marker id="mko-removed" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M2,1 L10,5 L2,9" fill="none" stroke="#f85149" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="mk-neutral" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6e7681"/></marker><marker id="mko-neutral" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M2,1 L10,5 L2,9" fill="none" stroke="#6e7681" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect x="0" y="0" width="1284" height="626" rx="12" fill="#0d1117"/>
+<rect x="0" y="0" width="1284" height="626" rx="12" fill="url(#dots)"/>
+<g><rect class="lanebox" x="16" y="44" width="404" height="566" rx="12" fill="rgba(110,118,129,.07)"/>
+<text class="lanelabel" x="32" y="68" font-size="10" font-weight="700" letter-spacing=".12em" fill="#9198a1">MONOREPO · GIT + AGENT RULES</text>
+<rect class="lanebox" x="440" y="44" width="404" height="566" rx="12" fill="rgba(110,118,129,.07)"/>
+<text class="lanelabel" x="456" y="68" font-size="10" font-weight="700" letter-spacing=".12em" fill="#9198a1">DEMO APP · VITE + REACT</text>
+<rect class="lanebox" x="864" y="44" width="404" height="566" rx="12" fill="rgba(110,118,129,.07)"/>
+<text class="lanelabel" x="880" y="68" font-size="10" font-weight="700" letter-spacing=".12em" fill="#9198a1">TRIANGULATORS · BROWSER WASM / JS</text></g>
+<g><path class="edge edge-added" d="M122,144 L122,162 C122,171.94 130.06,180 140,180 L406.67,180 C423.24,180 436.67,193.43 436.67,210 L436.67,230.33 C436.67,235.67 440.99,240 446.33,240 L456,240" marker-end="url(#mk-added)" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+<path class="edge edge-added" d="M404,118 L407,118 C408.66,118 410,119.34 410,121 L410,201 C410,213.7 420.3,224 433,224 L456,224" marker-end="url(#mk-added)" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+<path class="edge edge-added" d="M642,258 L642,310" marker-end="url(#mk-added)" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+<path class="edge edge-added" d="M642,258 L642,279 C642,290.6 632.6,300 621,300 L484,300 C465.22,300 450,315.22 450,334 L450,551 C450,552.66 451.34,554 453,554 L456,554" marker-end="url(#mk-added)" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+<path class="edge edge-added" d="M642,258 L642,263 C642,265.76 644.24,268 647,268 L804,268 C822.78,268 838,283.22 838,302 L838,549 C838,551.76 835.76,554 833,554 L828,554" marker-end="url(#mk-added)" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+<path class="glow" stroke="#3fb950" d="M642,362 L642,414" fill="none" stroke-width="7" opacity="0.14"/>
+<path class="edge edge-added hero" d="M642,362 L642,414" marker-end="url(#mk-added)" fill="none" stroke="#3fb950" stroke-width="2.25"/>
+<circle r="3" fill="#3fb950"><animateMotion dur="2.1s" repeatCount="indefinite" path="M642,362 L642,414"/></circle>
+<circle r="3" fill="#3fb950"><animateMotion dur="2.1s" begin="-1.4s" repeatCount="indefinite" path="M642,362 L642,414"/></circle>
+<circle r="3" fill="#3fb950"><animateMotion dur="2.1s" begin="-0.7s" repeatCount="indefinite" path="M642,362 L642,414"/></circle>
+<path class="edge edge-added" d="M456,123 L439.67,123 C430.65,123 423.33,130.31 423.33,139.33 L423.33,428.67 C423.33,437.69 430.65,445 439.67,445 L456,445" marker-end="url(#mk-added)" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+<path class="edge edge-added" d="M828,453 L849,453 C860.6,453 870,462.4 870,474 L870,554 C870,556.76 872.24,559 875,559 L880,559" marker-end="url(#mk-added)" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+<path class="edge edge-added" d="M828,437 L841,437 C848.18,437 854,442.82 854,450 L854,469.5 C854,487.45 868.55,502 886.5,502 L1149,502 C1156.18,502 1162,507.82 1162,515 L1162,528" marker-end="url(#mk-added)" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+<circle r="2.6" fill="#3fb950"><animateMotion dur="1.6s" repeatCount="indefinite" path="M828,437 L841,437 C848.18,437 854,442.82 854,450 L854,469.5 C854,487.45 868.55,502 886.5,502 L1149,502 C1156.18,502 1162,507.82 1162,515 L1162,528"/></circle>
+<path class="edge edge-added" d="M642,476 L642,497 C642,508.6 632.6,518 621,518 L551,518 C548.24,518 546,520.24 546,523 L546,528" marker-end="url(#mk-added)" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+<path class="edge edge-added" d="M642,476 L642,481 C642,483.76 644.24,486 647,486 L717,486 C728.6,486 738,495.4 738,507 L738,528" marker-end="url(#mk-added)" fill="none" stroke="#3fb950" stroke-width="1.5"/></g>
+<g><g class="cardsh" filter="drop-shadow(0 1px 2px rgba(0,0,0,.28))"><rect class="card card-added" x="32" y="92" width="180" height="52" rx="10" fill="#1c2128" stroke-width="1" stroke="#3fb950" stroke-opacity="0.55"/>
+<rect class="chip" x="46" y="105" width="26" height="26" rx="7" fill="rgba(110,118,129,.18)"/><g><path class="glyph-stroke" d="M52,114 h14" stroke="#9198a1" stroke-width="1.4" fill="none"/>
+<path class="glyph-stroke" d="M52,122 h14" stroke="#9198a1" stroke-width="1.4" fill="none"/>
+<circle class="glyph" fill="#9198a1" cx="57" cy="114" r="2.2"/>
+<circle class="glyph" fill="#9198a1" cx="62" cy="122" r="2.2"/></g>
+<text class="ntitle" x="82" y="123" font-size="11.5" font-weight="600" fill="#e6edf3">AGENTS.md</text>
+<g class="bdg bdg-added"><rect x="164.45" y="84" width="40.55" height="16" rx="8" fill="rgba(46,160,67,.15)" stroke="rgba(63,185,80,.4)" stroke-width="1"/><text x="184.73" y="95" text-anchor="middle" font-size="8.5" font-weight="700" letter-spacing=".06em" fill="#3fb950">NEW</text></g></g>
+<g class="cardsh" filter="drop-shadow(0 1px 2px rgba(0,0,0,.28))"><rect class="card card-added" x="224" y="92" width="180" height="52" rx="10" fill="#1c2128" stroke-width="1" stroke="#3fb950" stroke-opacity="0.55"/>
+<rect class="chip" x="238" y="105" width="26" height="26" rx="7" fill="rgba(110,118,129,.18)"/><g><path class="glyph-stroke" d="M244,114 h14" stroke="#9198a1" stroke-width="1.4" fill="none"/>
+<path class="glyph-stroke" d="M244,122 h14" stroke="#9198a1" stroke-width="1.4" fill="none"/>
+<circle class="glyph" fill="#9198a1" cx="249" cy="114" r="2.2"/>
+<circle class="glyph" fill="#9198a1" cx="254" cy="122" r="2.2"/></g>
+<text class="ntitle" x="274" y="123" font-size="11.5" font-weight="600" fill="#e6edf3">project-planning skill</text>
+<g class="bdg bdg-added"><rect x="356.45" y="84" width="40.55" height="16" rx="8" fill="rgba(46,160,67,.15)" stroke="rgba(63,185,80,.4)" stroke-width="1"/><text x="376.73" y="95" text-anchor="middle" font-size="8.5" font-weight="700" letter-spacing=".06em" fill="#3fb950">NEW</text></g></g>
+<g class="cardsh" filter="drop-shadow(0 1px 2px rgba(0,0,0,.28))"><rect class="card card-added" x="456" y="92" width="372" height="62" rx="10" fill="#1c2128" stroke-width="1" stroke="#3fb950" stroke-opacity="0.55"/>
+<rect class="chip" x="470" y="110" width="26" height="26" rx="7" fill="rgba(110,118,129,.18)"/><g><ellipse class="glyph-stroke" stroke="#9198a1" stroke-width="1.4" fill="none" cx="483" cy="118.5" rx="6.5" ry="2.6"/>
+<path class="glyph-stroke" d="M476.5,118.5 v9 a6.5,2.6 0 0 0 13 0 v-9" stroke="#9198a1" stroke-width="1.4" fill="none"/></g>
+<text class="ntitle" x="506" y="119" font-size="13" font-weight="600" fill="#e6edf3">buildings.json</text>
+<text class="nsub" x="506" y="137" font-size="9.5" fill="#9198a1" font-family="ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, monospace">OSM Berlin, ODbL</text>
+<g class="bdg bdg-added"><rect x="780.45" y="84" width="40.55" height="16" rx="8" fill="rgba(46,160,67,.15)" stroke="rgba(63,185,80,.4)" stroke-width="1"/><text x="800.73" y="95" text-anchor="middle" font-size="8.5" font-weight="700" letter-spacing=".06em" fill="#3fb950">NEW</text></g></g>
+<g class="cardsh" filter="drop-shadow(0 1px 2px rgba(0,0,0,.28))"><rect class="card card-added" x="456" y="206" width="372" height="52" rx="10" fill="#1c2128" stroke-width="1" stroke="#3fb950" stroke-opacity="0.55"/>
+<rect class="chip" x="470" y="219" width="26" height="26" rx="7" fill="rgba(110,118,129,.18)"/><g><rect class="glyph-stroke" x="476" y="226" width="14" height="12" rx="2" stroke="#9198a1" stroke-width="1.4" fill="none"/>
+<path class="glyph-stroke" d="M480.5,226 v12" stroke="#9198a1" stroke-width="1.4" fill="none"/></g>
+<text class="ntitle" x="506" y="237" font-size="13" font-weight="600" fill="#e6edf3">App shell</text>
+<g class="bdg bdg-added"><rect x="780.45" y="198" width="40.55" height="16" rx="8" fill="rgba(46,160,67,.15)" stroke="rgba(63,185,80,.4)" stroke-width="1"/><text x="800.73" y="209" text-anchor="middle" font-size="8.5" font-weight="700" letter-spacing=".06em" fill="#3fb950">NEW</text></g></g>
+<g class="cardsh" filter="drop-shadow(0 1px 2px rgba(0,0,0,.28))"><rect class="card card-added" x="456" y="310" width="372" height="52" rx="10" fill="#1c2128" stroke-width="1" stroke="#3fb950" stroke-opacity="0.55"/>
+<rect class="chip" x="470" y="323" width="26" height="26" rx="7" fill="rgba(110,118,129,.18)"/><g><rect class="glyph-stroke" x="476" y="330" width="14" height="12" rx="2" stroke="#9198a1" stroke-width="1.4" fill="none"/>
+<path class="glyph-stroke" d="M480.5,330 v12" stroke="#9198a1" stroke-width="1.4" fill="none"/></g>
+<text class="ntitle" x="506" y="341" font-size="13" font-weight="600" fill="#e6edf3">DrawCanvas</text>
+<g class="bdg bdg-added"><rect x="780.45" y="302" width="40.55" height="16" rx="8" fill="rgba(46,160,67,.15)" stroke="rgba(63,185,80,.4)" stroke-width="1"/><text x="800.73" y="313" text-anchor="middle" font-size="8.5" font-weight="700" letter-spacing=".06em" fill="#3fb950">NEW</text></g></g>
+<g class="cardsh" filter="drop-shadow(0 1px 2px rgba(0,0,0,.28))"><rect class="card card-added" x="456" y="414" width="372" height="62" rx="10" fill="#1c2128" stroke-width="1" stroke="#3fb950" stroke-opacity="0.55"/>
+<rect class="chip" x="470" y="432" width="26" height="26" rx="7" fill="rgba(110,118,129,.18)"/><g><text class="glyph" x="483" y="449.5" text-anchor="middle" fill="#9198a1" font-size="11" font-family="ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, monospace">{ }</text></g>
+<text class="ntitle" x="506" y="441" font-size="13" font-weight="600" fill="#e6edf3">triangulate.ts</text>
+<text class="nsub" x="506" y="459" font-size="9.5" fill="#9198a1" font-family="ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, monospace">shared adapter</text>
+<g class="bdg bdg-added"><rect x="780.45" y="406" width="40.55" height="16" rx="8" fill="rgba(46,160,67,.15)" stroke="rgba(63,185,80,.4)" stroke-width="1"/><text x="800.73" y="417" text-anchor="middle" font-size="8.5" font-weight="700" letter-spacing=".06em" fill="#3fb950">NEW</text></g></g>
+<g class="cardsh" filter="drop-shadow(0 1px 2px rgba(0,0,0,.28))"><rect class="card card-added" x="456" y="528" width="180" height="52" rx="10" fill="#1c2128" stroke-width="1" stroke="#3fb950" stroke-opacity="0.55"/>
+<rect class="chip" x="470" y="541" width="26" height="26" rx="7" fill="rgba(110,118,129,.18)"/><g><rect class="glyph-stroke" x="476" y="548" width="14" height="12" rx="2" stroke="#9198a1" stroke-width="1.4" fill="none"/>
+<path class="glyph-stroke" d="M480.5,548 v12" stroke="#9198a1" stroke-width="1.4" fill="none"/></g>
+<text class="ntitle" x="506" y="559" font-size="11.5" font-weight="600" fill="#e6edf3">TrianglePanel</text>
+<g class="bdg bdg-added"><rect x="588.45" y="520" width="40.55" height="16" rx="8" fill="rgba(46,160,67,.15)" stroke="rgba(63,185,80,.4)" stroke-width="1"/><text x="608.73" y="531" text-anchor="middle" font-size="8.5" font-weight="700" letter-spacing=".06em" fill="#3fb950">NEW</text></g></g>
+<g class="cardsh" filter="drop-shadow(0 1px 2px rgba(0,0,0,.28))"><rect class="card card-added" x="648" y="528" width="180" height="52" rx="10" fill="#1c2128" stroke-width="1" stroke="#3fb950" stroke-opacity="0.55"/>
+<rect class="chip" x="662" y="541" width="26" height="26" rx="7" fill="rgba(110,118,129,.18)"/><g><rect class="glyph-stroke" x="668" y="548" width="14" height="12" rx="2" stroke="#9198a1" stroke-width="1.4" fill="none"/>
+<path class="glyph-stroke" d="M672.5,548 v12" stroke="#9198a1" stroke-width="1.4" fill="none"/></g>
+<text class="ntitle" x="698" y="559" font-size="11.5" font-weight="600" fill="#e6edf3">BenchmarkCard</text>
+<g class="bdg bdg-added"><rect x="780.45" y="520" width="40.55" height="16" rx="8" fill="rgba(46,160,67,.15)" stroke="rgba(63,185,80,.4)" stroke-width="1"/><text x="800.73" y="531" text-anchor="middle" font-size="8.5" font-weight="700" letter-spacing=".06em" fill="#3fb950">NEW</text></g></g>
+<g class="cardsh context" filter="drop-shadow(0 1px 2px rgba(0,0,0,.28))" opacity="0.82"><rect class="card" x="880" y="528" width="180" height="62" rx="10" fill="#1c2128" stroke-width="1" stroke="#3d444d"/>
+<rect class="chip" x="894" y="546" width="26" height="26" rx="7" fill="rgba(110,118,129,.18)"/><g><path class="glyph-stroke" d="M907,552 l6.5,3.5 v7 l-6.5,3.5 l-6.5,-3.5 v-7 Z" stroke="#9198a1" stroke-width="1.4" fill="none"/>
+<path class="glyph-stroke" d="M900.5,555.5 l6.5,3.5 l6.5,-3.5" stroke="#9198a1" stroke-width="1.4" fill="none"/>
+<path class="glyph-stroke" d="M907,559 v7" stroke="#9198a1" stroke-width="1.4" fill="none"/></g>
+<text class="ntitle" x="930" y="555" font-size="11.5" font-weight="600" fill="#e6edf3">earcut</text>
+<text class="nsub" x="930" y="573" font-size="9.5" fill="#9198a1" font-family="ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, monospace">mapbox/earcut</text></g>
+<g class="cardsh context" filter="drop-shadow(0 1px 2px rgba(0,0,0,.28))" opacity="0.82"><rect class="card" x="1072" y="528" width="180" height="62" rx="10" fill="#1c2128" stroke-width="1" stroke="#3d444d"/>
+<rect class="chip" x="1086" y="546" width="26" height="26" rx="7" fill="rgba(110,118,129,.18)"/><g><path class="glyph-stroke" d="M1099,552 l6.5,3.5 v7 l-6.5,3.5 l-6.5,-3.5 v-7 Z" stroke="#9198a1" stroke-width="1.4" fill="none"/>
+<path class="glyph-stroke" d="M1092.5,555.5 l6.5,3.5 l6.5,-3.5" stroke="#9198a1" stroke-width="1.4" fill="none"/>
+<path class="glyph-stroke" d="M1099,559 v7" stroke="#9198a1" stroke-width="1.4" fill="none"/></g>
+<text class="ntitle" x="1122" y="555" font-size="11.5" font-weight="600" fill="#e6edf3">earstrip</text>
+<text class="nsub" x="1122" y="573" font-size="9.5" fill="#9198a1" font-family="ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, monospace">GLMap/earstrip WASM</text></g></g>
+<g><g><rect class="lpill" x="240.43" y="172.5" width="65.81" height="15" rx="7.5" fill="#0d1117" stroke="#21262d" stroke-width="1"/><text class="ltext ltext-added" x="273.33" y="183.5" text-anchor="middle" font-size="9.5" font-weight="600" fill="#3fb950">demo rules</text></g>
+<g><rect class="lpill" x="341.89" y="156" width="78.11" height="15" rx="7.5" fill="#0d1117" stroke="#21262d" stroke-width="1"/><text class="ltext ltext-added" x="380.95" y="167" text-anchor="middle" font-size="9.5" font-weight="600" fill="#3fb950">PLAN.md first</text></g>
+<g><rect class="lpill" x="599.3" y="380.5" width="85.4" height="15" rx="7.5" fill="#0d1117" stroke="#21262d" stroke-width="1"/><text class="ltext ltext-added" x="642" y="391.5" text-anchor="middle" font-size="9.5" font-weight="600" fill="#3fb950">current polygon</text></g>
+<g><rect class="lpill" x="387.62" y="276.5" width="71.42" height="15" rx="7.5" fill="#0d1117" stroke="#21262d" stroke-width="1"/><text class="ltext ltext-added" x="423.33" y="287.5" text-anchor="middle" font-size="9.5" font-weight="600" fill="#3fb950">59 footprints</text></g>
+<g><rect class="lpill" x="844.66" y="501" width="50.69" height="15" rx="7.5" fill="#0d1117" stroke="#21262d" stroke-width="1"/><text class="ltext ltext-added" x="870" y="512" text-anchor="middle" font-size="9.5" font-weight="600" fill="#3fb950">earcut()</text></g>
+<g><rect class="lpill" x="970.03" y="494.5" width="95.44" height="15" rx="7.5" fill="#0d1117" stroke="#21262d" stroke-width="1"/><text class="ltext ltext-added" x="1017.75" y="505.5" text-anchor="middle" font-size="9.5" font-weight="600" fill="#3fb950">earstrip() / strips()</text></g>
+<g><rect class="lpill" x="597.21" y="489.5" width="89.59" height="15" rx="7.5" fill="#0d1117" stroke="#21262d" stroke-width="1"/><text class="ltext ltext-added" x="642" y="500.5" text-anchor="middle" font-size="9.5" font-weight="600" fill="#3fb950">triangles + strips</text></g>
+<g><rect class="lpill" x="690.07" y="499.5" width="75.87" height="15" rx="7.5" fill="#0d1117" stroke="#21262d" stroke-width="1"/><text class="ltext ltext-added" x="728" y="510.5" text-anchor="middle" font-size="9.5" font-weight="600" fill="#3fb950">N-run timings</text></g></g>
+</svg>
