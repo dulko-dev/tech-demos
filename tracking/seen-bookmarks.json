@@ -1,0 +1,18 @@
+{
+  "proposed": [
+    {
+      "id": "hn-50193170",
+      "title": "earstrip",
+      "url": "https://news.ycombinator.com/item?id=50193170",
+      "date": "2026-10-25",
+      "status": "approved"
+    },
+    {
+      "id": "hn-50212065",
+      "title": "Kimi K3.1 Pro",
+      "url": "https://news.ycombinator.com/item?id=50212065",
+      "date": "2026-10-25",
+      "status": "skipped (paid API)"
+    }
+  ]
+}
