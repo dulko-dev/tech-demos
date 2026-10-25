@@ -1,0 +1,651 @@
+[
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "2.5:1 (need 4.5:1) — text #d1d5db on #667eea (gradient on nav.navbar)"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "2.7:1 (need 4.5:1) — text #ffffff on #8598ee (gradient on nav.navbar)"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "2.4:1 (need 4.5:1) — text #e5e7eb on #7d91ed (gradient on header.hero)"
+  },
+  {
+    "antipattern": "gradient-text",
+    "name": "Gradient text",
+    "description": "Gradient text is decorative rather than meaningful — a common AI tell, especially on headings and metrics. Use solid colors for text.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "background-clip: text + gradient"
+  },
+  {
+    "antipattern": "gray-on-color",
+    "name": "Gray text on colored background",
+    "description": "Gray text looks washed out on colored backgrounds. Use a darker shade of the background color instead, or white/near-white for contrast.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "text #9ca3af on bg gradient(#667eea, #764ba2)"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "1.4:1 (need 4.5:1) — text #9ca3af on #667eea (gradient on header.hero)"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "4.2:1 (need 4.5:1) — text #ffffff on #8b5cf6 (gradient on button.btn-primary)",
+    "advisory": true
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "3.2:1 (need 4.5:1) — text #ffffff on #758bec (gradient on header.hero)"
+  },
+  {
+    "antipattern": "gray-on-color",
+    "name": "Gray text on colored background",
+    "description": "Gray text looks washed out on colored backgrounds. Use a darker shade of the background color instead, or white/near-white for contrast.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "text #a1a1aa on bg gradient(#667eea, #764ba2)"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "1.4:1 (need 4.5:1) — text #a1a1aa on #667eea (gradient on header.hero)"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "3.4:1 (need 4.5:1) — text #888888 on #f9fafb"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "3.5:1 (need 4.5:1) — text #888888 on #ffffff"
+  },
+  {
+    "antipattern": "gradient-text",
+    "name": "Gradient text",
+    "description": "Gradient text is decorative rather than meaningful — a common AI tell, especially on headings and metrics. Use solid colors for text.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "background-clip: text + gradient"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "2.6:1 (need 4.5:1) — text #999999 on #f3f4f6"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "3.5:1 (need 4.5:1) — text #888888 on #ffffff"
+  },
+  {
+    "antipattern": "gradient-text",
+    "name": "Gradient text",
+    "description": "Gradient text is decorative rather than meaningful — a common AI tell, especially on headings and metrics. Use solid colors for text.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "background-clip: text + gradient"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "3.5:1 (need 4.5:1) — text #888888 on #ffffff"
+  },
+  {
+    "antipattern": "gradient-text",
+    "name": "Gradient text",
+    "description": "Gradient text is decorative rather than meaningful — a common AI tell, especially on headings and metrics. Use solid colors for text.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "background-clip: text + gradient"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "2.5:1 (need 4.5:1) — text #9ca3af on #ffffff"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "4.47:1 (need 4.5:1) — text #6366f1 on #ffffff",
+    "advisory": true
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "3.7:1 (need 4.5:1) — text #ffffff on #667eea (gradient on div.avatar)",
+    "advisory": true
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "2.7:1 (need 4.5:1) — text #999999 on #f9fafb"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "3.7:1 (need 4.5:1) — text #ffffff on #667eea (gradient on div.avatar)",
+    "advisory": true
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "2.7:1 (need 4.5:1) — text #999999 on #f9fafb"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "2.8:1 (need 4.5:1) — text #999999 on #ffffff"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "3.5:1 (need 4.5:1) — text #888888 on #ffffff"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "4.47:1 (need 4.5:1) — text #6366f1 on #ffffff",
+    "advisory": true
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "4.2:1 (need 4.5:1) — text #ffffff on #8b5cf6 (gradient on div.popular-badge)",
+    "advisory": true
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "4.2:1 (need 4.5:1) — text #ffffff on #8b5cf6 (gradient on button.btn-primary)",
+    "advisory": true
+  },
+  {
+    "antipattern": "gray-on-color",
+    "name": "Gray text on colored background",
+    "description": "Gray text looks washed out on colored backgrounds. Use a darker shade of the background color instead, or white/near-white for contrast.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "text #9ca3af on bg gradient(#667eea, #764ba2)"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "1.4:1 (need 4.5:1) — text #9ca3af on #667eea (gradient on footer.footer)"
+  },
+  {
+    "antipattern": "bounce-easing",
+    "name": "Bounce or elastic easing",
+    "description": "Bounce and elastic easing feel dated and tacky. Real objects decelerate smoothly — use exponential easing (ease-out-quart/quint/expo) instead.",
+    "severity": "advisory",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "animation: bounceIn",
+    "advisory": true
+  },
+  {
+    "antipattern": "bounce-easing",
+    "name": "Bounce or elastic easing",
+    "description": "Bounce and elastic easing feel dated and tacky. Real objects decelerate smoothly — use exponential easing (ease-out-quart/quint/expo) instead.",
+    "severity": "advisory",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+    "advisory": true
+  },
+  {
+    "antipattern": "bounce-easing",
+    "name": "Bounce or elastic easing",
+    "description": "Bounce and elastic easing feel dated and tacky. Real objects decelerate smoothly — use exponential easing (ease-out-quart/quint/expo) instead.",
+    "severity": "advisory",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+    "advisory": true
+  },
+  {
+    "antipattern": "bounce-easing",
+    "name": "Bounce or elastic easing",
+    "description": "Bounce and elastic easing feel dated and tacky. Real objects decelerate smoothly — use exponential easing (ease-out-quart/quint/expo) instead.",
+    "severity": "advisory",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+    "advisory": true
+  },
+  {
+    "antipattern": "bounce-easing",
+    "name": "Bounce or elastic easing",
+    "description": "Bounce and elastic easing feel dated and tacky. Real objects decelerate smoothly — use exponential easing (ease-out-quart/quint/expo) instead.",
+    "severity": "advisory",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+    "advisory": true
+  },
+  {
+    "antipattern": "icon-tile-stack",
+    "name": "Icon tile stacked above heading",
+    "description": "A small rounded-square icon container above a heading is the universal AI feature-card template — every generator outputs this exact shape. Try a side-by-side icon and heading, or let the icon sit in flow without its own container.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "56x56px icon tile above h3 \"Blazing Fast\""
+  },
+  {
+    "antipattern": "icon-tile-stack",
+    "name": "Icon tile stacked above heading",
+    "description": "A small rounded-square icon container above a heading is the universal AI feature-card template — every generator outputs this exact shape. Try a side-by-side icon and heading, or let the icon sit in flow without its own container.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "56x56px icon tile above h3 \"AI-Powered\""
+  },
+  {
+    "antipattern": "icon-tile-stack",
+    "name": "Icon tile stacked above heading",
+    "description": "A small rounded-square icon container above a heading is the universal AI feature-card template — every generator outputs this exact shape. Try a side-by-side icon and heading, or let the icon sit in flow without its own container.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "56x56px icon tile above h3 \"Enterprise Security\""
+  },
+  {
+    "antipattern": "icon-tile-stack",
+    "name": "Icon tile stacked above heading",
+    "description": "A small rounded-square icon container above a heading is the universal AI feature-card template — every generator outputs this exact shape. Try a side-by-side icon and heading, or let the icon sit in flow without its own container.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "44x44px icon tile above h3 \"Starter\""
+  },
+  {
+    "antipattern": "icon-tile-stack",
+    "name": "Icon tile stacked above heading",
+    "description": "A small rounded-square icon container above a heading is the universal AI feature-card template — every generator outputs this exact shape. Try a side-by-side icon and heading, or let the icon sit in flow without its own container.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "44x44px icon tile above h3 \"Pro\""
+  },
+  {
+    "antipattern": "icon-tile-stack",
+    "name": "Icon tile stacked above heading",
+    "description": "A small rounded-square icon container above a heading is the universal AI feature-card template — every generator outputs this exact shape. Try a side-by-side icon and heading, or let the icon sit in flow without its own container.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "44x44px icon tile above h3 \"Enterprise\""
+  },
+  {
+    "antipattern": "overused-font",
+    "name": "Overused font",
+    "description": "Inter, Roboto, Fraunces, Geist, Plus Jakarta Sans, and Space Grotesk are used on so many sites they no longer feel distinctive. Each new wave of AI-generated UIs converges on the same handful of faces. Choose a face that gives your interface personality.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "Primary font: inter"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "Card inside card (div)"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "Card inside card (div)"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "Card inside card (div)"
+  },
+  {
+    "antipattern": "ai-color-palette",
+    "name": "AI color palette",
+    "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. A gradient in one of those hues is the tell on its own; flat neon ink on a dark ground is charged once a second tell hue joins it. Choose a distinctive, intentional palette.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "Purple/violet accent colors detected"
+  },
+  {
+    "antipattern": "gradient-text",
+    "name": "Gradient text",
+    "description": "Gradient text is decorative rather than meaningful — a common AI tell, especially on headings and metrics. Use solid colors for text.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "background-clip: text + gradient"
+  },
+  {
+    "antipattern": "em-dash-overuse",
+    "name": "Em-dash overuse",
+    "description": "Em-dash saturation in body copy is an AI cadence tell. Advisory only: humans use em-dashes legitimately, so this fires only on saturation — at least 8 em-dashes (— or --) at a density near one per 500 characters of body text — never on a long article that uses a few. Prefer commas, colons, periods, or parentheses.",
+    "severity": "advisory",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "11 em-dashes in body text",
+    "advisory": true
+  },
+  {
+    "antipattern": "marketing-buzzword",
+    "name": "Marketing buzzword",
+    "description": "Generic SaaS phrases (streamline / empower / supercharge / world-class / enterprise-grade / next-generation / cutting-edge / etc) are instant AI tells. Pick a specific verb and noun that says what the product literally does.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/index.html",
+    "line": 0,
+    "snippet": "4 buzzword phrases: \"features to streamline your workflow an\""
+  },
+  {
+    "antipattern": "overused-font",
+    "name": "Overused font",
+    "description": "Inter, Roboto, Fraunces, Geist, Plus Jakarta Sans, and Space Grotesk are used on so many sites they no longer feel distinctive. Each new wave of AI-generated UIs converges on the same handful of faces. Choose a face that gives your interface personality.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/style.css",
+    "line": 8,
+    "snippet": "font-family: 'Inter"
+  },
+  {
+    "antipattern": "overused-font",
+    "name": "Overused font",
+    "description": "Inter, Roboto, Fraunces, Geist, Plus Jakarta Sans, and Space Grotesk are used on so many sites they no longer feel distinctive. Each new wave of AI-generated UIs converges on the same handful of faces. Choose a face that gives your interface personality.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/style.css",
+    "line": 100,
+    "snippet": "font-family: 'Inter"
+  },
+  {
+    "antipattern": "overused-font",
+    "name": "Overused font",
+    "description": "Inter, Roboto, Fraunces, Geist, Plus Jakarta Sans, and Space Grotesk are used on so many sites they no longer feel distinctive. Each new wave of AI-generated UIs converges on the same handful of faces. Choose a face that gives your interface personality.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/style.css",
+    "line": 118,
+    "snippet": "font-family: 'Inter"
+  },
+  {
+    "antipattern": "overused-font",
+    "name": "Overused font",
+    "description": "Inter, Roboto, Fraunces, Geist, Plus Jakarta Sans, and Space Grotesk are used on so many sites they no longer feel distinctive. Each new wave of AI-generated UIs converges on the same handful of faces. Choose a face that gives your interface personality.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/style.css",
+    "line": 262,
+    "snippet": "font-family: 'Inter"
+  },
+  {
+    "antipattern": "overused-font",
+    "name": "Overused font",
+    "description": "Inter, Roboto, Fraunces, Geist, Plus Jakarta Sans, and Space Grotesk are used on so many sites they no longer feel distinctive. Each new wave of AI-generated UIs converges on the same handful of faces. Choose a face that gives your interface personality.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/style.css",
+    "line": 410,
+    "snippet": "font-family: 'Inter"
+  },
+  {
+    "antipattern": "gradient-text",
+    "name": "Gradient text",
+    "description": "Gradient text is decorative rather than meaningful — a common AI tell, especially on headings and metrics. Use solid colors for text.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/style.css",
+    "line": 73,
+    "snippet": "background-clip: text + gradient"
+  },
+  {
+    "antipattern": "gradient-text",
+    "name": "Gradient text",
+    "description": "Gradient text is decorative rather than meaningful — a common AI tell, especially on headings and metrics. Use solid colors for text.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/style.css",
+    "line": 219,
+    "snippet": "background-clip: text + gradient"
+  },
+  {
+    "antipattern": "bounce-easing",
+    "name": "Bounce or elastic easing",
+    "description": "Bounce and elastic easing feel dated and tacky. Real objects decelerate smoothly — use exponential easing (ease-out-quart/quint/expo) instead.",
+    "severity": "advisory",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/style.css",
+    "line": 64,
+    "snippet": "animation: bounceIn",
+    "advisory": true
+  },
+  {
+    "antipattern": "bounce-easing",
+    "name": "Bounce or elastic easing",
+    "description": "Bounce and elastic easing feel dated and tacky. Real objects decelerate smoothly — use exponential easing (ease-out-quart/quint/expo) instead.",
+    "severity": "advisory",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/style.css",
+    "line": 64,
+    "snippet": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+    "advisory": true
+  },
+  {
+    "antipattern": "bounce-easing",
+    "name": "Bounce or elastic easing",
+    "description": "Bounce and elastic easing feel dated and tacky. Real objects decelerate smoothly — use exponential easing (ease-out-quart/quint/expo) instead.",
+    "severity": "advisory",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/style.css",
+    "line": 102,
+    "snippet": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+    "advisory": true
+  },
+  {
+    "antipattern": "bounce-easing",
+    "name": "Bounce or elastic easing",
+    "description": "Bounce and elastic easing feel dated and tacky. Real objects decelerate smoothly — use exponential easing (ease-out-quart/quint/expo) instead.",
+    "severity": "advisory",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/style.css",
+    "line": 120,
+    "snippet": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+    "advisory": true
+  },
+  {
+    "antipattern": "bounce-easing",
+    "name": "Bounce or elastic easing",
+    "description": "Bounce and elastic easing feel dated and tacky. Real objects decelerate smoothly — use exponential easing (ease-out-quart/quint/expo) instead.",
+    "severity": "advisory",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/style.css",
+    "line": 166,
+    "snippet": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+    "advisory": true
+  },
+  {
+    "antipattern": "bounce-easing",
+    "name": "Bounce or elastic easing",
+    "description": "Bounce and elastic easing feel dated and tacky. Real objects decelerate smoothly — use exponential easing (ease-out-quart/quint/expo) instead.",
+    "severity": "advisory",
+    "category": "slop",
+    "file": "/workspace/apps/impeccable-before-after/pages/before/style.css",
+    "line": 264,
+    "snippet": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+    "advisory": true
+  }
+]
