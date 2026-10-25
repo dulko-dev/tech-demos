@@ -1,0 +1,340 @@
+{
+  "schemaVersion": "0.2.0",
+  "kind": "graph",
+  "title": "Bootstrap monorepo and earstrip vs earcut demo",
+  "summary": "Adds the tech-demos monorepo rules and the first demo app: a browser tool that draws the same polygon with earcut and earstrip, times both, and loads committed OSM building footprints. No backend and no API key.",
+  "lenses": ["architecture", "data-flow"],
+  "provenance": {
+    "repo": { "owner": "dulko-dev", "name": "tech-demos", "host": "github.com" },
+    "base": { "sha": "ad89c27e37f98ac5af06dada1445f8b61f31b804", "ref": "main" },
+    "head": { "sha": "1bf0685667d0308b2c1bc241cf0118f208fd59f7", "ref": "cursor/earstrip-vs-earcut-demo-73c4" },
+    "pullRequest": {
+      "number": 1,
+      "title": "Bootstrap tech-demos monorepo + earstrip vs earcut demo app",
+      "url": "https://github.com/dulko-dev/tech-demos/pull/1"
+    },
+    "generator": { "name": "pr-lens-skill", "version": "0.2.0" }
+  },
+  "stats": {
+    "filesChanged": 36,
+    "additions": 2798,
+    "deletions": 0,
+    "chips": [
+      { "label": "Mode", "value": "skill+render", "tone": "neutral" },
+      { "label": "Key", "value": "none", "tone": "hero" }
+    ]
+  },
+  "lanes": [
+    { "id": "repo", "label": "Monorepo", "subtitle": "git + agent rules", "order": 0, "delta": "added" },
+    { "id": "demo", "label": "Demo app", "subtitle": "Vite + React", "order": 1, "delta": "added" },
+    { "id": "libs", "label": "Triangulators", "subtitle": "browser WASM / JS", "order": 2 }
+  ],
+  "nodes": [
+    {
+      "id": "agents-md",
+      "label": "AGENTS.md",
+      "kind": "config",
+      "delta": "added",
+      "lane": "repo",
+      "summary": "Rules for later demos: one app per pick, Bun, bunfig age pin, plan first.",
+      "files": [{ "path": "AGENTS.md" }]
+    },
+    {
+      "id": "planning-skill",
+      "label": "project-planning skill",
+      "kind": "config",
+      "delta": "added",
+      "lane": "repo",
+      "summary": "Vendored planning skill that this PR's PLAN.md follows.",
+      "files": [{ "path": "skills/project-planning/SKILL.md" }]
+    },
+    {
+      "id": "app-shell",
+      "label": "App shell",
+      "kind": "ui",
+      "delta": "added",
+      "lane": "demo",
+      "summary": "One-screen React app: draw card, two triangle panels, benchmark table.",
+      "files": [{ "path": "apps/earstrip-vs-earcut/src/App.tsx" }]
+    },
+    {
+      "id": "draw-canvas",
+      "label": "DrawCanvas",
+      "kind": "ui",
+      "delta": "added",
+      "lane": "demo",
+      "summary": "Click-to-draw rings and holes, plus presets including a 1000-hole stress case.",
+      "files": [{ "path": "apps/earstrip-vs-earcut/src/components/DrawCanvas.tsx" }]
+    },
+    {
+      "id": "triangle-panel",
+      "label": "TrianglePanel",
+      "kind": "ui",
+      "delta": "added",
+      "lane": "demo",
+      "summary": "Paints fills and wireframe; can color earstrip output by strip id.",
+      "files": [{ "path": "apps/earstrip-vs-earcut/src/components/TrianglePanel.tsx" }]
+    },
+    {
+      "id": "benchmark-card",
+      "label": "BenchmarkCard",
+      "kind": "ui",
+      "delta": "added",
+      "lane": "demo",
+      "summary": "Runs each triangulator N times and shows median ms and speedup vs earcut.",
+      "files": [{ "path": "apps/earstrip-vs-earcut/src/components/BenchmarkCard.tsx" }]
+    },
+    {
+      "id": "triangulate",
+      "label": "triangulate.ts",
+      "kind": "module",
+      "delta": "added",
+      "lane": "demo",
+      "subtitle": "shared adapter",
+      "summary": "One adapter for earcut, earstrip list mode, and earstrip.strips().",
+      "files": [{ "path": "apps/earstrip-vs-earcut/src/lib/triangulate.ts", "startLine": 1, "endLine": 124 }]
+    },
+    {
+      "id": "buildings",
+      "label": "buildings.json",
+      "kind": "datastore",
+      "delta": "added",
+      "lane": "demo",
+      "subtitle": "OSM Berlin, ODbL",
+      "summary": "59 committed building footprints. No network call at runtime.",
+      "files": [{ "path": "apps/earstrip-vs-earcut/src/data/buildings.json" }]
+    },
+    {
+      "id": "earcut",
+      "label": "earcut",
+      "kind": "package",
+      "delta": "unchanged",
+      "lane": "libs",
+      "subtitle": "mapbox/earcut",
+      "summary": "Existing JS ear-clipper. The baseline the demo times against."
+    },
+    {
+      "id": "earstrip",
+      "label": "earstrip",
+      "kind": "package",
+      "delta": "unchanged",
+      "lane": "libs",
+      "subtitle": "GLMap/earstrip WASM",
+      "summary": "Existing WASM triangulator with a drop-in list API and native strips()."
+    }
+  ],
+  "edges": [
+    {
+      "id": "agents-to-app",
+      "from": "agents-md",
+      "to": "app-shell",
+      "kind": "other",
+      "delta": "added",
+      "label": "demo rules"
+    },
+    {
+      "id": "plan-to-app",
+      "from": "planning-skill",
+      "to": "app-shell",
+      "kind": "other",
+      "delta": "added",
+      "label": "PLAN.md first"
+    },
+    {
+      "id": "app-to-draw",
+      "from": "app-shell",
+      "to": "draw-canvas",
+      "kind": "render",
+      "delta": "added"
+    },
+    {
+      "id": "app-to-panels",
+      "from": "app-shell",
+      "to": "triangle-panel",
+      "kind": "render",
+      "delta": "added"
+    },
+    {
+      "id": "app-to-bench",
+      "from": "app-shell",
+      "to": "benchmark-card",
+      "kind": "render",
+      "delta": "added"
+    },
+    {
+      "id": "draw-to-tri",
+      "from": "draw-canvas",
+      "to": "triangulate",
+      "kind": "call",
+      "delta": "added",
+      "label": "current polygon",
+      "emphasis": "hero",
+      "animated": true
+    },
+    {
+      "id": "buildings-to-tri",
+      "from": "buildings",
+      "to": "triangulate",
+      "kind": "data",
+      "delta": "added",
+      "label": "59 footprints"
+    },
+    {
+      "id": "tri-to-earcut",
+      "from": "triangulate",
+      "to": "earcut",
+      "kind": "call",
+      "delta": "added",
+      "label": "earcut()"
+    },
+    {
+      "id": "tri-to-earstrip",
+      "from": "triangulate",
+      "to": "earstrip",
+      "kind": "call",
+      "delta": "added",
+      "label": "earstrip() / strips()",
+      "animated": true
+    },
+    {
+      "id": "tri-to-panels",
+      "from": "triangulate",
+      "to": "triangle-panel",
+      "kind": "data",
+      "delta": "added",
+      "label": "triangles + strips"
+    },
+    {
+      "id": "tri-to-bench",
+      "from": "triangulate",
+      "to": "benchmark-card",
+      "kind": "data",
+      "delta": "added",
+      "label": "N-run timings"
+    }
+  ],
+  "flows": [
+    {
+      "id": "draw-and-compare",
+      "title": "Draw a polygon and compare both libraries",
+      "delta": "added",
+      "participants": [
+        { "node": "draw-canvas" },
+        { "node": "triangulate" },
+        { "node": "earcut" },
+        { "node": "earstrip" },
+        { "node": "triangle-panel" }
+      ],
+      "messages": [
+        {
+          "id": "points",
+          "from": "draw-canvas",
+          "to": "triangulate",
+          "label": "vertices + hole indices",
+          "kind": "sync",
+          "delta": "added"
+        },
+        {
+          "id": "call-earcut",
+          "from": "triangulate",
+          "to": "earcut",
+          "label": "earcut(coords, holes, 2)",
+          "kind": "sync",
+          "delta": "added"
+        },
+        {
+          "id": "earcut-back",
+          "from": "earcut",
+          "to": "triangulate",
+          "label": "triangle index list",
+          "kind": "return",
+          "delta": "added"
+        },
+        {
+          "id": "call-earstrip",
+          "from": "triangulate",
+          "to": "earstrip",
+          "label": "earstrip() then strips()",
+          "kind": "sync",
+          "delta": "added"
+        },
+        {
+          "id": "earstrip-back",
+          "from": "earstrip",
+          "to": "triangulate",
+          "label": "list + strip ends",
+          "kind": "return",
+          "delta": "added"
+        },
+        {
+          "id": "paint",
+          "from": "triangulate",
+          "to": "triangle-panel",
+          "label": "two TriangleSets",
+          "kind": "sync",
+          "delta": "added"
+        }
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "overview",
+      "title": "What this PR adds",
+      "lens": "architecture",
+      "summary": "Monorepo rules plus the comparison app and the two existing libraries it times.",
+      "defaultOpen": true,
+      "scope": { "kind": "all" },
+      "children": [
+        {
+          "id": "compare-path",
+          "title": "The comparison path",
+          "lens": "architecture",
+          "summary": "Polygon in, both libraries, two painted panels and a timing table.",
+          "scope": {
+            "kind": "selection",
+            "nodes": ["draw-canvas", "triangulate", "earcut", "earstrip", "triangle-panel", "benchmark-card", "buildings"],
+            "edges": ["draw-to-tri", "buildings-to-tri", "tri-to-earcut", "tri-to-earstrip", "tri-to-panels", "tri-to-bench"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "draw-flow",
+      "title": "Draw and compare",
+      "lens": "data-flow",
+      "scope": { "kind": "selection", "flows": ["draw-and-compare"] }
+    }
+  ],
+  "walkthrough": {
+    "steps": [
+      {
+        "id": "headline",
+        "heading": "A new app now times two triangulators",
+        "body": "Same polygon goes to earcut and earstrip. You see both meshes and live timings in one screen.",
+        "stage": { "kind": "view", "view": "overview" }
+      },
+      {
+        "id": "adapter",
+        "heading": "One adapter now calls both libraries",
+        "body": "triangulate.ts wraps earcut, the drop-in list, and strips(), so the UI never talks to WASM itself.",
+        "stage": { "kind": "view", "view": "compare-path" },
+        "focus": { "kind": "selection", "nodes": ["triangulate", "earcut", "earstrip"] }
+      },
+      {
+        "id": "flow",
+        "heading": "Clicks now become two triangle sets",
+        "body": "Closing a ring (or loading OSM footprints) runs both libraries and paints two panels.",
+        "stage": { "kind": "flow", "flow": "draw-and-compare" },
+        "focus": { "kind": "selection", "messages": ["points", "call-earcut", "call-earstrip", "paint"] }
+      },
+      {
+        "id": "blast",
+        "heading": "Rules files added beside the demo",
+        "body": "AGENTS.md and the planning skill land so later demos stay one app each, on Bun.",
+        "stage": { "kind": "view", "view": "overview" },
+        "focus": { "kind": "selection", "nodes": ["agents-md", "planning-skill"] }
+      }
+    ]
+  }
+}

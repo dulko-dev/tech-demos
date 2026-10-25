@@ -1,0 +1,62 @@
+{
+  "generatedHow": "Agent skill wrote graph.json from the real diffs. Official @coldtea/pr-lens-cli validate + render produced the SVGs. No GEMINI_API_KEY / OPENAI_API_KEY. analyze was not used. canvas push minted unlisted view links without an account.",
+  "cli": "@coldtea/pr-lens-cli",
+  "renderer": "@coldtea/pr-lens-renderer@0.3.6",
+  "schemaVersion": "0.2.0",
+  "prs": [
+    {
+      "id": "tech-demos-1",
+      "repo": "dulko-dev/tech-demos",
+      "number": 1,
+      "title": "Bootstrap tech-demos monorepo + earstrip vs earcut demo app",
+      "url": "https://github.com/dulko-dev/tech-demos/pull/1",
+      "additions": 2798,
+      "deletions": 0,
+      "filesChanged": 36,
+      "summary": "Adds monorepo rules (AGENTS.md, planning skill) and the first demo: a Vite/React tool that draws the same polygon with earcut and earstrip, times both, and loads 59 committed OSM building footprints. No backend.",
+      "diffNotes": [
+        "All files are additions on top of the empty main README.",
+        "The interesting runtime path is triangulate.ts calling earcut(), earstrip(), and earstrip.strips().",
+        "On a self-intersecting pentagram, list mode can return 0 triangles while strips() adds crossing points."
+      ],
+      "canvasUrl": "https://prlens.dev/c/TnEWUL9N0KhGkmK7FKAxJw",
+      "defaultView": "overview"
+    },
+    {
+      "id": "tech-demos-2",
+      "repo": "dulko-dev/tech-demos",
+      "number": 2,
+      "title": "Impeccable before/after: does the detector + skill improve AI-default UI?",
+      "url": "https://github.com/dulko-dev/tech-demos/pull/2",
+      "additions": 3106,
+      "deletions": 0,
+      "filesChanged": 26,
+      "summary": "A Vite shell that iframes the same SyncFlow landing before and after Impeccable. BEFORE detect is 63 findings; AFTER is 0. Counts come from committed impeccable detect --json output.",
+      "diffNotes": [
+        "Only apps/impeccable-before-after/ is in this PR (bootstrap files live on PR #1).",
+        "The rewrite path is the existing Impeccable CLI (init through polish), not new product code.",
+        "The PR itself notes: no human interview, no URL-engine scan; a clean AFTER is a floor, not beauty proof."
+      ],
+      "canvasUrl": "https://prlens.dev/c/TELBpoi36HKeAwTk_Ku4lQ",
+      "defaultView": "overview"
+    },
+    {
+      "id": "react-13968",
+      "repo": "facebook/react",
+      "number": 13968,
+      "title": "Implement the experimental Hooks proposal behind a feature flag",
+      "url": "https://github.com/facebook/react/pull/13968",
+      "additions": 5868,
+      "deletions": 130,
+      "filesChanged": 36,
+      "summary": "The 2018 Hooks PR. Public hook APIs, hook state on a fiber, a server dispatcher, and eslint-plugin-react-hooks — all behind enableHooks. Class components stay the default path.",
+      "diffNotes": [
+        "Famous public PR (PR Lens's own marketing cites react#13968).",
+        "Client path: ReactHooks.js → dispatcher → ReactFiberHooks.js → scheduler / commit.",
+        "Server path is a separate PartialRendererHooks.js so SSR stays sync and effects are no-ops."
+      ],
+      "canvasUrl": "https://prlens.dev/c/SnGUVNWi4hQW5pKkNoaumQ",
+      "defaultView": "overview"
+    }
+  ]
+}

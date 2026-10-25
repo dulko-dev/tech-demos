@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "0.2.0",
+  "kind": "render-manifest",
+  "graph": {
+    "headSha": "561af389b9ef5f0654c82f70a618e3765189280a",
+    "contentHash": "c26debd9a0ff1df59fbcf1d0c8512a50"
+  },
+  "renderer": {
+    "name": "@coldtea/pr-lens-renderer",
+    "version": "0.3.6"
+  },
+  "assets": [
+    {
+      "id": "overview-light",
+      "lens": "architecture",
+      "theme": "light",
+      "view": "overview",
+      "mediaType": "image/svg+xml",
+      "contentHash": "4f63f55d59d86f0e6db3c3debe18e402",
+      "bytes": 16145,
+      "width": 1284,
+      "height": 418,
+      "animated": true,
+      "path": "overview-light-4f63f55d59d86f0e6db3c3debe18e402.svg"
+    },
+    {
+      "id": "overview-dark",
+      "lens": "architecture",
+      "theme": "dark",
+      "view": "overview",
+      "mediaType": "image/svg+xml",
+      "contentHash": "1d5b9705454cb03399cd11a6e65ef2ba",
+      "bytes": 16328,
+      "width": 1284,
+      "height": 418,
+      "animated": true,
+      "path": "overview-dark-1d5b9705454cb03399cd11a6e65ef2ba.svg"
+    },
+    {
+      "id": "pages-pair-light",
+      "lens": "architecture",
+      "theme": "light",
+      "view": "pages-pair",
+      "mediaType": "image/svg+xml",
+      "contentHash": "676f645bd83084862ea660d5e2c52650",
+      "bytes": 12229,
+      "width": 1284,
+      "height": 304,
+      "animated": true,
+      "path": "pages-pair-light-676f645bd83084862ea660d5e2c52650.svg"
+    },
+    {
+      "id": "pages-pair-dark",
+      "lens": "architecture",
+      "theme": "dark",
+      "view": "pages-pair",
+      "mediaType": "image/svg+xml",
+      "contentHash": "185d0b2264374f33ee29213845317408",
+      "bytes": 12346,
+      "width": 1284,
+      "height": 304,
+      "animated": true,
+      "path": "pages-pair-dark-185d0b2264374f33ee29213845317408.svg"
+    },
+    {
+      "id": "polish-flow-light",
+      "lens": "data-flow",
+      "theme": "light",
+      "view": "polish-flow",
+      "mediaType": "image/svg+xml",
+      "contentHash": "ca81ad0d0794dcbd5a7341f8a742d546",
+      "bytes": 13052,
+      "width": 1406,
+      "height": 337,
+      "animated": true,
+      "path": "polish-flow-light-ca81ad0d0794dcbd5a7341f8a742d546.svg"
+    },
+    {
+      "id": "polish-flow-dark",
+      "lens": "data-flow",
+      "theme": "dark",
+      "view": "polish-flow",
+      "mediaType": "image/svg+xml",
+      "contentHash": "736eed0e3d9e796f48604e6e63507361",
+      "bytes": 13191,
+      "width": 1406,
+      "height": 337,
+      "animated": true,
+      "path": "polish-flow-dark-736eed0e3d9e796f48604e6e63507361.svg"
+    }
+  ]
+}

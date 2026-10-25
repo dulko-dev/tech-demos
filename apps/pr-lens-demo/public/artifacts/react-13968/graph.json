@@ -1,0 +1,354 @@
+{
+  "schemaVersion": "0.2.0",
+  "kind": "graph",
+  "title": "Implement experimental Hooks behind a feature flag",
+  "summary": "Adds the Hooks proposal (useState, useEffect, useContext, and friends) behind enableHooks. Public APIs land in react, the hook list lives on a fiber, the server renderer gets a matching dispatcher, and a new eslint-plugin-react-hooks package teaches the Rules of Hooks. Class components stay the default path.",
+  "lenses": ["architecture", "data-flow"],
+  "provenance": {
+    "repo": { "owner": "facebook", "name": "react", "host": "github.com" },
+    "base": { "sha": "37c7fe0a5fa5a0892b0eaa5982d0ad7f58220331", "ref": "master" },
+    "head": { "sha": "504576306461a5ff339dc99691842f0f35a8bf4c", "ref": "hooks" },
+    "pullRequest": {
+      "number": 13968,
+      "title": "Implement the experimental Hooks proposal behind a feature flag",
+      "url": "https://github.com/facebook/react/pull/13968"
+    },
+    "generator": { "name": "pr-lens-skill", "version": "0.2.0" }
+  },
+  "stats": {
+    "filesChanged": 36,
+    "additions": 5868,
+    "deletions": 130,
+    "chips": [
+      { "label": "Flag", "value": "enableHooks", "tone": "hero" },
+      { "label": "Year", "value": "2018", "tone": "neutral" }
+    ]
+  },
+  "lanes": [
+    { "id": "public", "label": "react", "subtitle": "public API", "order": 0 },
+    { "id": "reconciler", "label": "react-reconciler", "subtitle": "client fibers", "order": 1 },
+    { "id": "server", "label": "react-dom/server", "subtitle": "partial renderer", "order": 2 },
+    { "id": "tooling", "label": "Tooling", "subtitle": "eslint", "order": 3, "delta": "added" }
+  ],
+  "nodes": [
+    {
+      "id": "react-js",
+      "label": "React.js",
+      "kind": "module",
+      "delta": "modified",
+      "lane": "public",
+      "summary": "Re-exports the new hook functions when the flag is on.",
+      "files": [{ "path": "packages/react/src/React.js" }]
+    },
+    {
+      "id": "react-hooks",
+      "label": "ReactHooks.js",
+      "kind": "module",
+      "delta": "added",
+      "lane": "public",
+      "summary": "useState, useEffect, useContext and the other public hook entry points.",
+      "files": [{ "path": "packages/react/src/ReactHooks.js", "startLine": 1, "endLine": 120 }]
+    },
+    {
+      "id": "feature-flags",
+      "label": "enableHooks",
+      "kind": "config",
+      "delta": "added",
+      "lane": "public",
+      "summary": "Feature flag that keeps Hooks off in production builds of this PR.",
+      "files": [{ "path": "packages/shared/ReactFeatureFlags.js" }]
+    },
+    {
+      "id": "class-component",
+      "label": "Class component path",
+      "kind": "module",
+      "delta": "unchanged",
+      "lane": "reconciler",
+      "subtitle": "ReactFiberClassComponent",
+      "summary": "Existing update path. Hooks do not replace it; they sit beside it.",
+      "files": [{ "path": "packages/react-reconciler/src/ReactFiberClassComponent.js" }]
+    },
+    {
+      "id": "begin-work",
+      "label": "Begin work",
+      "kind": "module",
+      "delta": "modified",
+      "lane": "reconciler",
+      "summary": "Function components now prepare a hook dispatcher before render.",
+      "files": [{ "path": "packages/react-reconciler/src/ReactFiberBeginWork.js" }]
+    },
+    {
+      "id": "fiber-hooks",
+      "label": "ReactFiberHooks",
+      "kind": "module",
+      "delta": "added",
+      "lane": "reconciler",
+      "subtitle": "hook list on a fiber",
+      "summary": "Mount and update implementations: queue, memoized state, and effect lists.",
+      "files": [{ "path": "packages/react-reconciler/src/ReactFiberHooks.js", "startLine": 1, "endLine": 779 }]
+    },
+    {
+      "id": "dispatcher",
+      "label": "Dispatcher",
+      "kind": "module",
+      "delta": "modified",
+      "lane": "reconciler",
+      "summary": "Resolves which hook implementation the current render is allowed to call.",
+      "files": [{ "path": "packages/react-reconciler/src/ReactFiberDispatcher.js" }]
+    },
+    {
+      "id": "commit-work",
+      "label": "Commit work",
+      "kind": "module",
+      "delta": "modified",
+      "lane": "reconciler",
+      "summary": "Flushes hook effect tags after the tree commits.",
+      "files": [{ "path": "packages/react-reconciler/src/ReactFiberCommitWork.js" }]
+    },
+    {
+      "id": "scheduler",
+      "label": "Scheduler",
+      "kind": "module",
+      "delta": "modified",
+      "lane": "reconciler",
+      "summary": "Hook updates reuse the existing expiration and work loop.",
+      "files": [{ "path": "packages/react-reconciler/src/ReactFiberScheduler.js" }]
+    },
+    {
+      "id": "partial-renderer",
+      "label": "ReactPartialRenderer",
+      "kind": "module",
+      "delta": "modified",
+      "lane": "server",
+      "summary": "Server render now prepares a hook dispatcher for function components.",
+      "files": [{ "path": "packages/react-dom/src/server/ReactPartialRenderer.js" }]
+    },
+    {
+      "id": "server-hooks",
+      "label": "PartialRendererHooks",
+      "kind": "module",
+      "delta": "added",
+      "lane": "server",
+      "summary": "Server-safe hook implementations. Effects are no-ops; state is sync.",
+      "files": [{ "path": "packages/react-dom/src/server/ReactPartialRendererHooks.js" }]
+    },
+    {
+      "id": "eslint-plugin",
+      "label": "eslint-plugin-react-hooks",
+      "kind": "package",
+      "delta": "added",
+      "lane": "tooling",
+      "summary": "New package. Rules of Hooks and exhaustive-deps land here, not in core.",
+      "files": [
+        { "path": "packages/eslint-plugin-react-hooks/src/RulesOfHooks.js" },
+        { "path": "packages/eslint-plugin-react-hooks/package.json" }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "flag-to-exports",
+      "from": "feature-flags",
+      "to": "react-js",
+      "kind": "dependency",
+      "delta": "added",
+      "label": "enableHooks"
+    },
+    {
+      "id": "exports-to-hooks",
+      "from": "react-js",
+      "to": "react-hooks",
+      "kind": "dependency",
+      "delta": "added",
+      "label": "re-export"
+    },
+    {
+      "id": "hooks-to-dispatcher",
+      "from": "react-hooks",
+      "to": "dispatcher",
+      "kind": "call",
+      "delta": "added",
+      "label": "resolveDispatcher()",
+      "emphasis": "hero",
+      "animated": true
+    },
+    {
+      "id": "begin-to-hooks",
+      "from": "begin-work",
+      "to": "fiber-hooks",
+      "kind": "call",
+      "delta": "added",
+      "label": "renderWithHooks"
+    },
+    {
+      "id": "dispatcher-to-fiber",
+      "from": "dispatcher",
+      "to": "fiber-hooks",
+      "kind": "call",
+      "delta": "added",
+      "label": "mount / update"
+    },
+    {
+      "id": "hooks-to-commit",
+      "from": "fiber-hooks",
+      "to": "commit-work",
+      "kind": "event",
+      "delta": "added",
+      "label": "effect list"
+    },
+    {
+      "id": "hooks-to-scheduler",
+      "from": "fiber-hooks",
+      "to": "scheduler",
+      "kind": "call",
+      "delta": "added",
+      "label": "dispatchAction"
+    },
+    {
+      "id": "begin-to-class",
+      "from": "begin-work",
+      "to": "class-component",
+      "kind": "call",
+      "delta": "unchanged",
+      "label": "updateClassComponent",
+      "emphasis": "muted"
+    },
+    {
+      "id": "server-to-hooks",
+      "from": "partial-renderer",
+      "to": "server-hooks",
+      "kind": "call",
+      "delta": "added",
+      "label": "server dispatcher"
+    },
+    {
+      "id": "eslint-to-hooks",
+      "from": "eslint-plugin",
+      "to": "react-hooks",
+      "kind": "other",
+      "delta": "added",
+      "label": "Rules of Hooks"
+    }
+  ],
+  "flows": [
+    {
+      "id": "use-state-update",
+      "title": "A useState update after first paint",
+      "delta": "added",
+      "participants": [
+        { "node": "react-hooks" },
+        { "node": "dispatcher" },
+        { "node": "fiber-hooks" },
+        { "node": "scheduler" },
+        { "node": "commit-work" }
+      ],
+      "messages": [
+        {
+          "id": "call-use-state",
+          "from": "react-hooks",
+          "to": "dispatcher",
+          "label": "useState(initial)",
+          "kind": "sync",
+          "delta": "added"
+        },
+        {
+          "id": "dispatch",
+          "from": "dispatcher",
+          "to": "fiber-hooks",
+          "label": "mountState / updateState",
+          "kind": "sync",
+          "delta": "added"
+        },
+        {
+          "id": "set-state",
+          "from": "fiber-hooks",
+          "to": "scheduler",
+          "label": "dispatchAction",
+          "kind": "async",
+          "delta": "added"
+        },
+        {
+          "id": "re-render",
+          "from": "scheduler",
+          "to": "fiber-hooks",
+          "label": "renderWithHooks",
+          "kind": "sync",
+          "delta": "added"
+        },
+        {
+          "id": "flush-effects",
+          "from": "fiber-hooks",
+          "to": "commit-work",
+          "label": "flush hook effects",
+          "kind": "async",
+          "delta": "added"
+        }
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "overview",
+      "title": "Hooks in the React tree",
+      "lens": "architecture",
+      "defaultOpen": true,
+      "scope": { "kind": "all" },
+      "children": [
+        {
+          "id": "client-path",
+          "title": "Client hook path",
+          "lens": "architecture",
+          "scope": {
+            "kind": "selection",
+            "nodes": ["react-hooks", "dispatcher", "begin-work", "fiber-hooks", "scheduler", "commit-work", "class-component"],
+            "edges": ["hooks-to-dispatcher", "begin-to-hooks", "dispatcher-to-fiber", "hooks-to-commit", "hooks-to-scheduler", "begin-to-class"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "state-flow",
+      "title": "useState after paint",
+      "lens": "data-flow",
+      "scope": { "kind": "selection", "flows": ["use-state-update"] }
+    }
+  ],
+  "walkthrough": {
+    "steps": [
+      {
+        "id": "headline",
+        "heading": "Hooks now sit behind enableHooks",
+        "body": "Function components can keep state and effects without a class. The flag keeps this off in prod builds of this PR.",
+        "stage": { "kind": "view", "view": "overview" }
+      },
+      {
+        "id": "public-api",
+        "heading": "React.js now re-exports hook calls",
+        "body": "useState and friends live in ReactHooks.js and jump to the current dispatcher.",
+        "stage": { "kind": "view", "view": "client-path" },
+        "focus": { "kind": "selection", "nodes": ["react-hooks", "dispatcher"], "edges": ["hooks-to-dispatcher"] }
+      },
+      {
+        "id": "fiber",
+        "heading": "Hook state now lives on the fiber",
+        "body": "ReactFiberHooks.js stores the list, queues updates, and hands effects to commit.",
+        "stage": { "kind": "flow", "flow": "use-state-update" },
+        "focus": { "kind": "selection", "messages": ["dispatch", "set-state", "flush-effects"] }
+      },
+      {
+        "id": "server",
+        "heading": "Server render got its own dispatcher",
+        "body": "PartialRendererHooks.js runs hooks without effects so SSR stays sync.",
+        "stage": { "kind": "view", "view": "overview" },
+        "focus": { "kind": "selection", "nodes": ["partial-renderer", "server-hooks"] }
+      },
+      {
+        "id": "lint",
+        "heading": "A new ESLint plugin was added",
+        "body": "Rules of Hooks ship as eslint-plugin-react-hooks, not inside the renderer.",
+        "stage": { "kind": "view", "view": "overview" },
+        "focus": { "kind": "selection", "nodes": ["eslint-plugin"] }
+      }
+    ]
+  }
+}
