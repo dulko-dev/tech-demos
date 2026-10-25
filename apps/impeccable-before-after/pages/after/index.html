@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SyncFlow. Tasks, docs, and owners on one line.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chivo+Condensed:wght@600;800&family=Chivo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="mast">
+    <p class="plate">SyncFlow</p>
+    <nav class="strip" aria-label="Page">
+      <ol>
+        <li><a href="#board">Board</a></li>
+        <li><a href="#notices">Notices</a></li>
+        <li><a href="#fares">Fares</a></li>
+        <li class="here"><a href="#trial">Trial</a></li>
+      </ol>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="platform" aria-labelledby="offer">
+      <h1 id="offer">Tasks, docs, and the people who own them sit on one line.</h1>
+      <p class="lede">
+        SyncFlow keeps the work, the writing about the work, and the names next to
+        both in a single list. Built for the person who has to answer
+        “who has this?” before coffee.
+      </p>
+
+      <figure class="route" aria-labelledby="route-caption">
+        <figcaption id="route-caption">The line this page is selling</figcaption>
+        <ol class="stations">
+          <li>
+            <span class="dot" aria-hidden="true"></span>
+            <strong>Tasks</strong>
+            <span>The list everyone already keeps</span>
+          </li>
+          <li>
+            <span class="dot" aria-hidden="true"></span>
+            <strong>Docs</strong>
+            <span>The spec that belongs to a row</span>
+          </li>
+          <li>
+            <span class="dot" aria-hidden="true"></span>
+            <strong>Owners</strong>
+            <span>The name next to the row</span>
+          </li>
+          <li class="terminus">
+            <span class="dot" aria-hidden="true"></span>
+            <strong>Trial</strong>
+            <span>Fourteen days, no card</span>
+          </li>
+        </ol>
+      </figure>
+
+      <form class="ticket" action="#trial-thanks" method="get">
+        <label for="email-hero">Work email</label>
+        <div class="ticket-row">
+          <input id="email-hero" name="email" type="email" autocomplete="email" required placeholder="you@company.com" />
+          <button type="submit">Start a 14-day trial</button>
+        </div>
+        <p class="fine">No credit card. Cancel from the same list you work in.</p>
+      </form>
+    </section>
+
+    <section class="board" id="board" aria-labelledby="board-title">
+      <h2 id="board-title">What moves. What you stop doing.</h2>
+      <table>
+        <caption>How a Monday changes when the three sit together</caption>
+        <thead>
+          <tr>
+            <th scope="col">On the line</th>
+            <th scope="col">What drops off</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Tasks</th>
+            <td>Recopying the same list into chat so someone else can see it.</td>
+          </tr>
+          <tr>
+            <th scope="row">Docs</th>
+            <td>Hunting the spec in a different tab from the work it describes.</td>
+          </tr>
+          <tr>
+            <th scope="row">Owners</th>
+            <td>Asking the channel who has the row, then waiting.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notices" id="notices" aria-labelledby="notices-title">
+      <h2 id="notices-title">Service notices</h2>
+      <p class="aside">Illustrative quotes. SyncFlow is a fictional product; these are not verified customers.</p>
+      <blockquote>
+        <p>We stopped pasting the standup list into Slack. The list is the standup.</p>
+        <footer>Jamie Doe, VP of Engineering, TechCorp</footer>
+      </blockquote>
+      <blockquote>
+        <p>The spec lives on the task. I do not open a second tool to remember why we started.</p>
+        <footer>Alex Smith, Founder, StartupXYZ</footer>
+      </blockquote>
+    </section>
+
+    <section class="fares" id="fares" aria-labelledby="fares-title">
+      <h2 id="fares-title">Fares</h2>
+      <table>
+        <caption>Placeholder prices for this demo. Not an offer.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Fare</th>
+            <th scope="col">Price</th>
+            <th scope="col">Includes</th>
+            <th scope="col"><span class="visually-hidden">Action</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Starter</th>
+            <td>$0 / month</td>
+            <td>3 projects, community support</td>
+            <td><a href="#trial">Start a 14-day trial</a></td>
+          </tr>
+          <tr class="active-leg">
+            <th scope="row">Pro</th>
+            <td>$29 / month</td>
+            <td>Unlimited projects, priority support, integrations</td>
+            <td><a href="#trial">Start a 14-day trial</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Enterprise</th>
+            <td>Custom</td>
+            <td>Everything in Pro, a named contact, a written SLA</td>
+            <td><a href="mailto:sales@example.invalid">Talk to sales</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="trial" id="trial" aria-labelledby="trial-title">
+      <h2 id="trial-title">Start a 14-day trial</h2>
+      <p>Same action as the top of the page. The list is empty until you put work in it.</p>
+      <form class="ticket" action="#trial-thanks" method="get">
+        <label for="email-trial">Work email</label>
+        <div class="ticket-row">
+          <input id="email-trial" name="email" type="email" autocomplete="email" required placeholder="you@company.com" />
+          <button type="submit">Start a 14-day trial</button>
+        </div>
+      </form>
+      <p id="trial-thanks" class="thanks" tabindex="-1">
+        Demo only. Nothing was sent. In a real product this would open an empty list with your email on it.
+      </p>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <p>© 2026 SyncFlow. Fictional product for an Impeccable before/after demo.</p>
+  </footer>
+</body>
+</html>

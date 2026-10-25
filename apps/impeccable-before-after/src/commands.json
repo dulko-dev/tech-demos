@@ -1,0 +1,50 @@
+[
+  {
+    "command": "/impeccable init",
+    "changed": "Wrote PRODUCT.md. All facts marked inferred; no human interview."
+  },
+  {
+    "command": "/impeccable critique pages/before",
+    "changed": "12/32 heuristic score. Snapshot persisted. Detector: 63 findings (44 primary, 19 advisory)."
+  },
+  {
+    "command": "/impeccable audit pages/before",
+    "changed": "6/20 technical score. Contrast, dead CTAs, no breakpoints."
+  },
+  {
+    "command": "concept-seed --scope direction --mode persuade",
+    "changed": "Assigned grounded #7 (transit wayfinding), seed:6a74bd5175f5fd94. Built unattended; no decision-page lock."
+  },
+  {
+    "command": "/impeccable typeset",
+    "changed": "Inter → Chivo + Chivo Condensed. Dropped gradient text."
+  },
+  {
+    "command": "/impeccable layout",
+    "changed": "Card grid → strip map, departure table, fare table. No nested cards."
+  },
+  {
+    "command": "/impeccable colorize",
+    "changed": "Porcelain / navy / reserved course-amber. No purple, no gray-on-color."
+  },
+  {
+    "command": "/impeccable animate",
+    "changed": "One route-line draw, exponential ease-out. Bounce removed. Reduced-motion path."
+  },
+  {
+    "command": "/impeccable clarify",
+    "changed": "One trial verb. Removed em-dashes, buzzwords, and invented 10x/85%/99.99% stats."
+  },
+  {
+    "command": "/impeccable adapt",
+    "changed": "Stations stack under 720px. 44–48px controls."
+  },
+  {
+    "command": "/impeccable harden",
+    "changed": "Skip link, labeled form, :target confirmation, focus rings, working CTAs."
+  },
+  {
+    "command": "/impeccable polish",
+    "changed": "AFTER scan 5 → 0 (label contrast, clamp() padding, side-tab quote bar)."
+  }
+]

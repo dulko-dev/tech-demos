@@ -1,0 +1,95 @@
+{
+  "detector": "impeccable detect --json (CLI 4.7.0, static HTML engine)",
+  "before": {
+    "total": 63,
+    "primary": 44,
+    "advisory": 19
+  },
+  "after": {
+    "total": 0,
+    "primary": 0,
+    "advisory": 0
+  },
+  "rows": [
+    {
+      "id": "low-contrast",
+      "name": "Low contrast text",
+      "before": 24,
+      "after": 0,
+      "severity": "warning",
+      "sampleBefore": "2.5:1 (need 4.5:1) — text #d1d5db on #667eea (gradient on nav.navbar)"
+    },
+    {
+      "id": "bounce-easing",
+      "name": "Bounce or elastic easing",
+      "before": 11,
+      "after": 0,
+      "severity": "advisory",
+      "sampleBefore": "animation: bounceIn"
+    },
+    {
+      "id": "gradient-text",
+      "name": "Gradient text",
+      "before": 7,
+      "after": 0,
+      "severity": "warning",
+      "sampleBefore": "background-clip: text + gradient"
+    },
+    {
+      "id": "icon-tile-stack",
+      "name": "Icon tile stacked above heading",
+      "before": 6,
+      "after": 0,
+      "severity": "warning",
+      "sampleBefore": "56x56px icon tile above h3 \"Blazing Fast\""
+    },
+    {
+      "id": "overused-font",
+      "name": "Overused font",
+      "before": 6,
+      "after": 0,
+      "severity": "warning",
+      "sampleBefore": "Primary font: inter"
+    },
+    {
+      "id": "gray-on-color",
+      "name": "Gray text on colored background",
+      "before": 3,
+      "after": 0,
+      "severity": "warning",
+      "sampleBefore": "text #9ca3af on bg gradient(#667eea, #764ba2)"
+    },
+    {
+      "id": "nested-cards",
+      "name": "Nested cards",
+      "before": 3,
+      "after": 0,
+      "severity": "warning",
+      "sampleBefore": "Card inside card (div)"
+    },
+    {
+      "id": "ai-color-palette",
+      "name": "AI color palette",
+      "before": 1,
+      "after": 0,
+      "severity": "warning",
+      "sampleBefore": "Purple/violet accent colors detected"
+    },
+    {
+      "id": "em-dash-overuse",
+      "name": "Em-dash overuse",
+      "before": 1,
+      "after": 0,
+      "severity": "advisory",
+      "sampleBefore": "11 em-dashes in body text"
+    },
+    {
+      "id": "marketing-buzzword",
+      "name": "Marketing buzzword",
+      "before": 1,
+      "after": 0,
+      "severity": "warning",
+      "sampleBefore": "4 buzzword phrases: \"features to streamline your workflow an\""
+    }
+  ]
+}
